@@ -31,5 +31,19 @@ namespace _29._09._21
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime thisDay = DateTime.Today;
+            dateTimePicker2.
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            if (numericUpDown1.Value < 18) 
+            {
+
+            }
+        }
     }
 }
