@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,11 +46,6 @@ namespace _29._09._21
            //     textBox1.Text
            // }
         }
-        public void SetMyCustomFormat()
-        {
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "MMMM dd, yyyy - dddd";
-        }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
@@ -64,6 +60,43 @@ namespace _29._09._21
         private void label8_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            {
+                using (var saveFileDialog = new SaveFileDialog())
+                {
+
+                    saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                    saveFileDialog.FilterIndex = 2;
+
+                    try
+                    {
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            File.WriteAllText(saveFileDialog.FileName, textBox1.Text);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: Could not save file to disk. Original error:" + ex.Message);
+                    }
+                }
+            }
+
+
+        
+    }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
