@@ -98,11 +98,11 @@ namespace _29._09._21
 
         private void button2_Click(object sender, EventArgs e)
         {
-           // if (numericUpDown1.Value < 18)
-            //{
-              //  
-            //}
-            richTextBox1.Text = textBox1.Text + " " + textBox2.Text + " " + numericUpDown1.Value + " " + dateTimePicker1.Text;
+            if (numericUpDown1.Value < 18)
+            {
+              
+            }
+            richTextBox1.Text = textBox1.Text + " " + textBox2.Text + " Lat" + numericUpDown1.Value + " " + dateTimePicker1.Text;
         }
     }
 }
