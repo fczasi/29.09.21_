@@ -98,5 +98,10 @@ namespace _29._09._21
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = textBox1.Text + " " + textBox2.Text + " " + numericUpDown1.Value + " " + dateTimePicker1.Text;
+        }
     }
 }
