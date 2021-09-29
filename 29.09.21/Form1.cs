@@ -41,10 +41,7 @@ namespace _29._09._21
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-           // if (numericUpDown1.Value < 18) 
-           // {
-           //     textBox1.Text
-           // }
+
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
@@ -68,14 +65,14 @@ namespace _29._09._21
                 using (var saveFileDialog = new SaveFileDialog())
                 {
 
-                    saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                    saveFileDialog.Filter = "txt files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf";
                     saveFileDialog.FilterIndex = 2;
 
                     try
                     {
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
                         {
-                            File.WriteAllText(saveFileDialog.FileName, textBox1.Text);
+                            File.WriteAllText(saveFileDialog.FileName, richTextBox1.Text);
                         }
                     }
                     catch (Exception ex)
@@ -101,6 +98,10 @@ namespace _29._09._21
 
         private void button2_Click(object sender, EventArgs e)
         {
+           // if (numericUpDown1.Value < 18)
+            //{
+              //  
+            //}
             richTextBox1.Text = textBox1.Text + " " + textBox2.Text + " " + numericUpDown1.Value + " " + dateTimePicker1.Text;
         }
     }
