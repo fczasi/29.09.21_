@@ -34,16 +34,36 @@ namespace _29._09._21
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DateTime thisDay = DateTime.Today;
-            dateTimePicker2.
+            label7.Text = DateTime.Now.ToString();
+            label8.Text = DateTime.Now.ToString("HH:mm");
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            if (numericUpDown1.Value < 18) 
-            {
+           // if (numericUpDown1.Value < 18) 
+           // {
+           //     textBox1.Text
+           // }
+        }
+        public void SetMyCustomFormat()
+        {
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "MMMM dd, yyyy - dddd";
+        }
 
-            }
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
