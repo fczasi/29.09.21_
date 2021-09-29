@@ -34,7 +34,7 @@ namespace _29._09._21
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label7.Text = DateTime.Now.ToString();
+            label7.Text = DateTime.Now.ToShortDateString();
             label8.Text = DateTime.Now.ToString("HH:mm");
         }
 
